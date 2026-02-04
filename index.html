@@ -1,12 +1,144 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
   <title>Amplisysten</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      display: flex;
+      height: 100vh;
+      background: #f4f6f8;
+    }
+
+    /* MENU LATERAL */
+    aside {
+      width: 220px;
+      background: #0f172a;
+      color: #fff;
+      padding: 20px;
+    }
+
+    aside h2 {
+      margin-bottom: 30px;
+      font-size: 20px;
+      text-align: center;
+    }
+
+    aside ul {
+      list-style: none;
+    }
+
+    aside ul li {
+      padding: 12px;
+      margin-bottom: 10px;
+      border-radius: 6px;
+      cursor: pointer;
+      background: #1e293b;
+    }
+
+    aside ul li:hover {
+      background: #334155;
+    }
+
+    /* CONTEÚDO */
+    main {
+      flex: 1;
+      padding: 20px;
+    }
+
+    header {
+      margin-bottom: 20px;
+    }
+
+    header h1 {
+      font-size: 24px;
+    }
+
+    /* PAINEL */
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    }
+
+    .card h3 {
+      font-size: 14px;
+      color: #64748b;
+    }
+
+    .card p {
+      font-size: 26px;
+      margin-top: 10px;
+      color: #0f172a;
+      font-weight: bold;
+    }
+  </style>
 </head>
 <body>
-  <h1>Amplisysten</h1>
-  <p>Sistema iniciado com sucesso.</p>
+
+  <aside>
+    <h2>Amplisysten</h2>
+    <ul>
+      <li>Painel</li>
+      <li>Gestão de Pátio</li>
+      <li>Parceiros</li>
+      <li>Financeiro</li>
+      <li>Configurações</li>
+    </ul>
+  </aside>
+
+  <main>
+    <header>
+      <h1>Painel</h1>
+    </header>
+
+    <section class="cards">
+      <div class="card">
+        <h3>Veículos no pátio</h3>
+        <p>0</p>
+      </div>
+
+      <div class="card">
+        <h3>Valor gerado hoje</h3>
+        <p>R$ 0,00</p>
+      </div>
+
+      <div class="card">
+        <h3>Liberações solicitadas</h3>
+        <p>0</p>
+      </div>
+
+      <div class="card">
+        <h3>Contas a vencer</h3>
+        <p>0</p>
+      </div>
+
+      <div class="card">
+        <h3>Dia de pagar</h3>
+        <p>0</p>
+      </div>
+
+      <div class="card">
+        <h3>Caixa</h3>
+        <p>R$ 0,00</p>
+      </div>
+    </section>
+  </main>
+
 </body>
 </html>
