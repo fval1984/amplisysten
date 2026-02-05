@@ -11,6 +11,7 @@
         --text: #0f172a;
         --muted: #64748b;
         --primary: #2563eb;
+        --primary-hover: #1d4ed8;
         --border: #e2e8f0;
       }
       * { box-sizing: border-box; }
@@ -74,10 +75,10 @@
         color: var(--muted);
         font-size: 14px;
       }
-      .footer {
-        margin-top: 20px;
-        font-size: 12px;
-        color: var(--muted);
+      .cta {
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
       }
       .button {
         display: inline-flex;
@@ -87,9 +88,24 @@
         padding: 12px 18px;
         font-weight: 600;
         text-decoration: none;
-        border: 1px solid var(--border);
+        border: 1px solid transparent;
+      }
+      .button.primary {
+        background: var(--primary);
+        color: white;
+      }
+      .button.primary:hover {
+        background: var(--primary-hover);
+      }
+      .button.ghost {
+        border-color: var(--border);
         color: var(--text);
         background: transparent;
+      }
+      .footer {
+        margin-top: 20px;
+        font-size: 12px;
+        color: var(--muted);
       }
     </style>
   </head>
@@ -101,7 +117,10 @@
             <h1 class="title">Amplipátio</h1>
             <p class="subtitle">Gestão simples e rápida do seu pátio, parceiros e financeiro.</p>
           </div>
-          <a class="button" href="#recursos">Ver recursos</a>
+          <div class="cta">
+            <a class="button primary" href="/login">Entrar</a>
+            <a class="button ghost" href="#recursos">Ver recursos</a>
+          </div>
         </div>
 
         <div id="recursos" class="grid">
@@ -126,3 +145,11 @@
             <p>Templates e dados bancários centralizados.</p>
           </div>
         </div>
+
+        <div class="footer">
+          Amplipátio • Sistema single-user com segurança via Supabase Auth
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
